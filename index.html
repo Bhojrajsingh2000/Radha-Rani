@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Radha Rani Digital Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css"/>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9e6e6;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in;
+    }
+    .menu-container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .category {
+      margin-bottom: 30px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .category h2 {
+      color: #ff69b4;
+      border-bottom: 2px solid #ff69b4;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .category h2:hover {
+      color: #ff1493;
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      transition: background-color 0.3s;
+    }
+    .item:hover {
+      background-color: #ffe6f0;
+      border-radius: 5px;
+    }
+    .price {
+      font-weight: bold;
+      color: #ff1493;
+      transition: transform 0.3s;
+    }
+    .item:hover .price {
+      transform: scale(1.1);
+    }
+    .hidden {
+      display: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      .item {
+        flex-direction: column;
+        text-align: center;
+      }
+      .price {
+        margin-top: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Radha Rani Fast Food & Restaurant</h1>
+    <p>Digital Menu - Updated April 20, 2025</p>
+  </header>
+  <div class="menu-container">
+    <div class="category" style="animation-delay: 0.2s">
+      <h2 onclick="toggleCategory(this)">Momos</h2>
+      <div class="items">
+        <div class="item"><span>Veg. Chilli Momos</span><span class="price">Half: Rs 40 | Full: Rs 70</span></div>
+        <div class="item"><span>Soya Momos</span><span class="price">Half: Rs 30 | Full: Rs 50</span></div>
+        <div class="item"><span>Veg. Momos</span><span class="price">Half: Rs 30 | Full: Rs 50</span></div>
+        <div class="item"><span>Veg. Crunchy Momos</span><span class="price">Half: Rs 40 | Full: Rs 70</span></div>
+        <div class="item"><span>Veg. Manchurian Momos</span><span class="price">Half: Rs 50 | Full: Rs 80</span></div>
+        <div class="item"><span>Paneer Momos</span><span class="price">Half: Rs 40 | Full: Rs 60</span></div>
+        <div class="item"><span>Paneer Crunchy Momos</span><span class="price">Half: Rs 50 | Full: Rs 80</span></div>
+        <div class="item"><span>Paneer Chilli Momos</span><span class="price">Half: Rs 50 | Full: Rs 80</span></div>
+      </div>
+    </div>
+    <div class="category" style="animation-delay: 0.4s">
+      <h2 onclick="toggleCategory(this)">Noodles</h2>
+      <div class="items">
+        <div class="item"><span>Veg. Noodles</span><span class="price">Half: Rs 30 | Full: Rs 50</span></div>
+        <div class="item"><span>Hakka Noodles</span><span class="price">Half: Rs 40 | Full: Rs 70</span></div>
+        <div class="item"><span>Singapuri Noodles</span><span class="price">Half: Rs 40 | Full: Rs 70</span></div>
+        <div class="item"><span>Garlic Noodles</span><span class="price">Half: Rs 40 | Full: Rs 70</span></div>
+      </div>
+    </div>
+    <div class="category" style="animation-delay: 0.6s">
+      <h2 onclick="toggleCategory(this)">Rolls</h2>
+      <div class="items">
+        <div class="item"><span>Spring Roll</span><span class="price">Half: Rs 20 | Full: Rs 40</span></div>
+        <div class="item"><span>Spring Roll Crunchy</span><span class="price">Half: Rs 40 | Full: Rs 60</span></div>
+      </div>
+    </div>
+    <div class="category" style="animation-delay: 0.8s">
+      <h2 onclick="toggleCategory(this)">Burger</h2>
+      <div class="items">
+        <div class="item"><span>Veg. Burger</span><span class="price">Rs 20</span></div>
+        <div class="item"><span>Aloo Tikki Burger</span><span class="price">Rs 25</span></div>
+        <div class="item"><span>Paneer Burger</span><span class="price">Rs 30</span></div>
+      </div>
+    </div>
+    <div class="category" style="animation-delay: 1.0s">
+      <h2 onclick="toggleCategory(this)">Other</h2>
+      <div class="items">
+        <div class="item"><span>Chilli Paneer</span><span class="price">Half: Rs 50 | Full: Rs 80</span></div>
+        <div class="item"><span>Chilli Potato</span><span class="price">Half: Rs 40 | Full: Rs 70</span></div>
+        <div class="item"><span>Honey Chilli Potato</span><span class="price">Half: Rs 50 | Full: Rs 80</span></div>
+        <div class="item"><span>French Fries</span><span class="price">Half: Rs 30 | Full: Rs 50</span></div>
+        <div class="item"><span>Peri Peri French Fry</span><span class="price">Half: Rs 40 | Full: Rs 60</span></div>
+        <div class="item"><span>Fried Rice</span><span class="price">Half: Rs 40 | Full: Rs 60</span></div>
+        <div class="item"><span>Veg. Manchurian</span><span class="price">Half: Rs 50 | Full: Rs 80</span></div>
+        <div class="item"><span>Peenut Mashala</span><span class="price">Half: Rs 40 | Full: Rs 60</span></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function toggleCategory(element) {
+      const items = element.nextElementSibling;
+      items.classList.toggle('hidden');
+      items.classList.toggle('animate__fadeIn');
+    }
+    document.querySelectorAll('.items').forEach(item => item.classList.add('hidden'));
+  </script>
+</body>
+          </html>
